@@ -38,4 +38,5 @@ export class RecadoEntity {
         referencedColumnName: 'id'
     })
     usuario!: UsuarioEntity
+
 }

@@ -1,5 +1,6 @@
-import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
-import { UsuarioEntity } from "./usuario.entity";
+import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm"
+import { UsuarioEntity } from "./usuario.entity"
+
 
 @Entity({ name: 'recados' })
 export class RecadoEntity {

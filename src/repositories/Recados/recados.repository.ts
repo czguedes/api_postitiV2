@@ -12,7 +12,7 @@ export class RecadosRepository {
 
     async usuarioExiste(id: string): Promise<boolean> {
 
-        const userEncontrado = await this._manager.findOne(UsuarioEntity, { where: { id } })
+        const userEncontrado = await this._manager.findOne(UsuarioEntity, { where: { id: id } })
 
         return !!userEncontrado
     }
@@ -83,7 +83,7 @@ export class RecadosRepository {
         const { id, arquivado, recado, titulo } = dados
 
 
-        const recadoEditar = await this._manager.update(RecadoEntity, { id }, { arquivado, recado, titulo })
+        const recadoEditar = await this._manager.update(RecadoEntity, { id: id }, { arquivado: arquivado, recado: recado, titulo: titulo })
 
         if (!recadoEditar.affected) {
             return {

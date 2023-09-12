@@ -1,10 +1,11 @@
 import { FindOptionsWhere } from "typeorm";
-import { pgHelper } from "../../database";
-import { RecadoEntity } from "../../database/entities/recado.entity";
-import { UsuarioEntity } from "../../database/entities/usuario.entity";
-import { Recado, RecadoDTO } from "../../models";
-import { EditarRecadoDTO, RetornoEditar } from "../../usecases/Recados/editar.usecase";
-import { RetornoExcluir } from "../../usecases/Recados/excluir.usecase";
+import { pgHelper } from "../../../../main/database";
+import { RecadoEntity } from "../../../shared/entities/recado.entity";
+import { UsuarioEntity } from "../../../shared/entities/usuario.entity";
+
+import { Recado, RecadoDTO } from "../../../models";
+import { EditarRecadoDTO, RetornoEditar } from "../usecases/editar.usecase";
+import { RetornoExcluir } from "../usecases/excluir.usecase";
 
 export class RecadosRepository {
 

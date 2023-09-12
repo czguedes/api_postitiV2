@@ -1,5 +1,6 @@
-import { Recado, RecadoDTO } from "../../models";
-import { RecadosRepository } from "../../repositories";
+
+import { Recado, RecadoDTO } from "../../../models";
+import { RecadosRepository } from "../repositories/recados.repository";
 
 type CriarRecadoRetorno = {
     sucesso: boolean

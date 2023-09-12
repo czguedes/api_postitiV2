@@ -1,9 +1,10 @@
 import { Request, Response } from "express";
-import { RecadoDTO } from "../../models";
-import { CriarRecado } from "../../usecases/Recados/criar.usecase";
-import { EditarRecado } from "../../usecases/Recados/editar.usecase";
-import { ExcluirRecado } from "../../usecases/Recados/excluir.usecase";
-import { ListarRecados } from "../../usecases/Recados/listar.usecase";
+import { RecadoDTO } from "../../../models";
+
+import { CriarRecado } from "../usecases/criar.usecase";
+import { EditarRecado } from "../usecases/editar.usecase";
+import { ExcluirRecado } from "../usecases/excluir.usecase";
+import { ListarRecados } from "../usecases/listar.usecase";
 
 export class RecadosController {
     async criar(req: Request, res: Response) {

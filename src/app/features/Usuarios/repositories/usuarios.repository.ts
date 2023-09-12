@@ -1,7 +1,8 @@
-import { pgHelper } from "../../database";
-import { UsuarioEntity } from "../../database/entities/usuario.entity";
-import { Usuario, UsuarioDTO } from "../../models";
-import { RespostaListar } from "../../usecases/Usuarios/listar.usecase";
+import { pgHelper } from "../../../../main/database";
+import { UsuarioEntity } from "../../../shared/entities/usuario.entity";
+
+import { Usuario, UsuarioDTO } from "../../../models";
+import { RespostaListar } from "../usecases/listar.usecase";
 
 
 

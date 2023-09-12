@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
-import { CadastrarUsuario } from "../../usecases/Usuarios/cadastrar.usecase";
-import { ListarUsuario } from "../../usecases/Usuarios/listar.usecase";
+
+import { CadastrarUsuario } from "../usecases/cadastrar.usecase";
+import { ListarUsuario } from "../usecases/listar.usecase";
 
 export class UsuariosController {
 

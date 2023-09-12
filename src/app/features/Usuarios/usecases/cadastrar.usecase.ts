@@ -1,5 +1,6 @@
-import { Usuario, UsuarioDTO } from "../../models";
-import { UsuariosRepository } from "../../repositories";
+
+import { Usuario, UsuarioDTO } from "../../../models";
+import { UsuariosRepository } from "../repositories/usuarios.repository";
 
 type RespostaCadastro = {
     sucesso: boolean

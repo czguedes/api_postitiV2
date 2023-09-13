@@ -1,6 +1,6 @@
-import { randomUUID } from "crypto"
 
 export type RecadoDTO = {
+    id: string
     titulo: string
     recado: string
     criadoPor: string
@@ -15,7 +15,7 @@ export class Recado {
     #arquivado: boolean
 
     constructor(dados: RecadoDTO) {
-        this.#id = randomUUID()
+        this.#id = dados.id
         this.#titulo = dados.titulo
         this.#recado = dados.recado
         this.#criadoPor = dados.criadoPor

@@ -1,6 +1,6 @@
-import { randomUUID } from "crypto"
 
 export type UsuarioDTO = {
+    id: string
     nome: string
     email: string
     senha: string
@@ -13,7 +13,7 @@ export class Usuario {
     #senha: string
 
     constructor(dados: UsuarioDTO) {
-        this.#id = randomUUID()
+        this.#id = dados.id
         this.#nome = dados.nome
         this.#email = dados.email
         this.#senha = dados.senha

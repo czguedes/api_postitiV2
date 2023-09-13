@@ -102,12 +102,13 @@ export class RecadosRepository {
     }
 
     private entityToModel(dadosDB: RecadoEntity): Recado {
-        const { criadoPor, recado, titulo } = dadosDB
+
 
         const retorno = new Recado({
-            criadoPor,
-            recado: recado ?? '',
-            titulo: titulo ?? ''
+            criadoPor: dadosDB.criadoPor,
+            id: dadosDB.id,
+            recado: dadosDB.recado!,
+            titulo: dadosDB.titulo!
         })
 
         return retorno

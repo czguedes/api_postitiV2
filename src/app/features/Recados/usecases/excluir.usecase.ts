@@ -1,4 +1,5 @@
-import { RecadosRepository } from "../../repositories";
+import { RecadosRepository } from "../repositories/recados.repository"
+
 
 export type RetornoExcluir = {
     sucesso: boolean,

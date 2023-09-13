@@ -1,6 +1,6 @@
-import { pgHelper } from "../../../../main/database";
 import { UsuarioEntity } from "../../../shared/entities/usuario.entity";
 
+import { ormConfig } from "../../../../main/config";
 import { Usuario, UsuarioDTO } from "../../../models";
 import { RespostaListar } from "../usecases/listar.usecase";
 
@@ -8,7 +8,7 @@ import { RespostaListar } from "../usecases/listar.usecase";
 
 export class UsuariosRepository {
 
-    constructor(private _manager = pgHelper.client.manager) { }
+    constructor(private _manager = ormConfig.manager) { }
 
     async emailExiste(email: string): Promise<boolean> {
 

@@ -1,15 +1,16 @@
 import { FindOptionsWhere } from "typeorm";
-import { pgHelper } from "../../../../main/database";
+
 import { RecadoEntity } from "../../../shared/entities/recado.entity";
 import { UsuarioEntity } from "../../../shared/entities/usuario.entity";
 
+import { ormConfig } from "../../../../main/config";
 import { Recado, RecadoDTO } from "../../../models";
 import { EditarRecadoDTO, RetornoEditar } from "../usecases/editar.usecase";
 import { RetornoExcluir } from "../usecases/excluir.usecase";
 
 export class RecadosRepository {
 
-    constructor(private _manager = pgHelper.client.manager) { }
+    constructor(private _manager = ormConfig.manager) { }
 
     async usuarioExiste(id: string): Promise<boolean> {
 

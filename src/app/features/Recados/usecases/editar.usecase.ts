@@ -1,5 +1,6 @@
-import { Recado } from "../../app/models"
-import { RecadosRepository } from "../../repositories"
+import { Recado } from "../../../models"
+import { RecadosRepository } from "../repositories/recados.repository"
+
 
 export type EditarRecadoDTO = {
     id: string

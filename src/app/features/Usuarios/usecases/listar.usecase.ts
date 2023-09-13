@@ -1,4 +1,5 @@
-import { UsuariosRepository } from "../../repositories";
+import { UsuariosRepository } from "../repositories/usuarios.repository"
+
 
 export type UsuariosSemSenha = {
     id: string

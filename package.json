@@ -7,7 +7,7 @@
     "prebuild": "rimraf dist",
     "dev": "ts-node-dev --respawn --transpile-only ./src/main/server.ts",
     "build": "npx tsc",
-    "start": "node ./dist/server.js",
+    "start": "node ./dist/main/server.js",
     "dev:db": "ts-node-dev --respawn --transpile-only ./src/database/test-connection-db.ts",
     "migration:run": "typeorm-ts-node-commonjs migration:run -d src/database/typeorm.ts"
   },

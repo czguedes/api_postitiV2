@@ -2,13 +2,16 @@ import cors from 'cors';
 import 'dotenv/config';
 import express from 'express';
 import "reflect-metadata";
-import { appInicializer } from '../server/server';
+import { rotasApp } from '.';
 
 
-const app = express();
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+export function serverStarter() {
+    const app = express();
+    app.use(express.json());
+    app.use(express.urlencoded({ extended: false }));
+    app.use(cors());
 
-app.use(cors());
+    rotasApp(app)
 
-appInicializer(app)
+    return app
+}

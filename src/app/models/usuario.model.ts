@@ -1,6 +1,5 @@
 
 export type UsuarioDTO = {
-    id: string
     nome: string
     email: string
     senha: string
@@ -12,8 +11,8 @@ export class Usuario {
     #email: string
     #senha: string
 
-    constructor(dados: UsuarioDTO) {
-        this.#id = dados.id
+    constructor(dados: UsuarioDTO, id: string) {
+        this.#id = id
         this.#nome = dados.nome
         this.#email = dados.email
         this.#senha = dados.senha

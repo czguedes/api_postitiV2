@@ -51,6 +51,6 @@ export class UsuariosRepository {
     }
 
     private entityToModel(dadosDB: UsuarioEntity): Usuario {
-        return new Usuario(dadosDB)
+        return new Usuario(dadosDB, dadosDB.id)
     }
 }

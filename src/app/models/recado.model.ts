@@ -1,6 +1,6 @@
 
 export type RecadoDTO = {
-    id: string
+
     titulo: string
     recado: string
     criadoPor: string
@@ -14,8 +14,8 @@ export class Recado {
     #criadoEm: string
     #arquivado: boolean
 
-    constructor(dados: RecadoDTO) {
-        this.#id = dados.id
+    constructor(dados: RecadoDTO, id: string) {
+        this.#id = id
         this.#titulo = dados.titulo
         this.#recado = dados.recado
         this.#criadoPor = dados.criadoPor

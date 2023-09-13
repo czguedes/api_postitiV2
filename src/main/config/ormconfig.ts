@@ -5,7 +5,7 @@ import { envServer } from "../../app/envs/serverEnvs";
 const isProduction = envServer.nodeEnv?.toLocaleLowerCase() === 'developer'
 const rootDir = isProduction ? 'dist' : 'src';
 
-export const typeormConfig = new DataSource({
+export const ormConfig = new DataSource({
     type: "postgres",
     url: envServer.dbUrl,
     synchronize: false,

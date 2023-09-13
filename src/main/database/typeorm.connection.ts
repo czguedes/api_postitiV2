@@ -1,5 +1,5 @@
 import { DataSource } from "typeorm";
-import { typeormConfig } from "../config";
+import { ormConfig } from "../config";
 
 export class DatabaseConnection {
     private static _connection: DataSource | null = null;
@@ -14,7 +14,7 @@ export class DatabaseConnection {
 
     public static async connect() {
         if (!this._connection) {
-            this._connection = await typeormConfig.initialize();
+            this._connection = await ormConfig.initialize();
             console.log('Banco de dados conectado');
         }
     }

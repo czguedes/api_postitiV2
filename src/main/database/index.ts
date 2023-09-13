@@ -1,4 +1,3 @@
-export * from '../config/ormconfig'
-export * from './pg-helper'
-export * from './typeorm'
+export * from './redis.connection'
+export * from './typeorm.connection'
 

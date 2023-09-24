@@ -1,4 +1,5 @@
 import { Recado } from "../../../models"
+import { CacheRepository } from "../../../shared/database/repositories/cache.repository"
 import { RecadosRepository } from "../repositories/recados.repository"
 
 
@@ -25,6 +26,7 @@ export class EditarRecado {
     async execute(idUsuario: string): Promise<RetornoEditar> {
 
         const repository = new RecadosRepository()
+        const redis = new CacheRepository()
 
         const usuarioExiste = await repository.usuarioExiste(idUsuario)
 
@@ -45,6 +47,8 @@ export class EditarRecado {
         }
 
         const retorno = await repository.editarRecado(this.#dados)
+
+        await redis.delete(`recados-usuario-${idUsuario}`)
 
         if (!retorno.sucesso) {
             return {

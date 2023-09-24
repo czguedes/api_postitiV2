@@ -6,6 +6,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "dev": "ts-node-dev --respawn --transpile-only ./src/main/server.ts",
+    "dev:redis": "ts-node-dev --respawn --transpile-only ./src/index.ts",
     "build": "npx tsc",
     "start": "node ./dist/main/server.js",
     "dev:db": "ts-node-dev --respawn --transpile-only ./src/database/test-connection-db.ts",

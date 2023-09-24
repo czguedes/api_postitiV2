@@ -8,11 +8,11 @@ export class CacheRepository {
         return JSON.parse(result);
     }
 
-    public async set(key: string, value: any) {
-        await this.redis.set(key, JSON.stringify(value));
+    public async set<T>(key: string, value: T): Promise<'OK'> {
+        return await this.redis.set(key, JSON.stringify(value));
     }
 
-    public async delete(key: string) {
+    public async delete(key: string): Promise<number> {
         return await this.redis.del(key);
     }
 }

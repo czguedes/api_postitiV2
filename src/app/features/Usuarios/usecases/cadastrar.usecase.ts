@@ -1,5 +1,6 @@
 
 import { Usuario, UsuarioDTO } from "../../../models";
+import { CacheRepository } from "../../../shared/database/repositories/cache.repository";
 import { UsuariosRepository } from "../repositories/usuarios.repository";
 
 type RespostaCadastro = {
@@ -18,8 +19,12 @@ export class CadastrarUsuario {
     async execute(): Promise<RespostaCadastro> {
 
         const repository = new UsuariosRepository()
+        const redis = new CacheRepository()
+
+
 
         const busca = await repository.emailExiste(this.#dados.email)
+
 
         if (busca) {
             return {

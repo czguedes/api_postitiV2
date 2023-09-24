@@ -22,10 +22,11 @@ export class RecadosController {
     }
 
     async excluir(req: Request, res: Response) {
+        const idUsuario = req.body
         const idRecado = req.params.id
 
         const usecase = new ExcluirRecado()
-        const retorno = await usecase.execute(idRecado)
+        const retorno = await usecase.execute(idRecado, idUsuario)
 
         if (!retorno.sucesso) {
             return res.status(404).json(retorno)
